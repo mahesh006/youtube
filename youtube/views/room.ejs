@@ -135,8 +135,12 @@
     };
 
     function onPlayerStateChange(event) {
-        emitState(event.data);
+        setTimeout(function() {
+          emitState(event.data);
+        }, 1000);
+        
     };
+    
 
     function stopVideo() {
         player.stopVideo();
