@@ -124,7 +124,7 @@
         } else if (playerStatus == 1 && expected != 'play') {
             socket.emit('play', roomName);
         } else if (playerStatus == 2 && expected != 'pause') {
-            socket.emit('pause', roomName);
+            socket.broadcast.to(roomName).emit('pause');
         } else if (playerStatus == 3) {
             socket.emit('buffering', player.getCurrentTime(), roomName);
         } else if (playerStatus == 5) {
