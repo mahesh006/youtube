@@ -80,14 +80,15 @@
                 mute: 0,
                 fs: 1,
                 rel: 0,
-                //origin: 'https://youtube-syncer-app.herokuapp.com'
+                origin: 'https://backdatabase.herokuapp.com'
             },
             events: {
                 'onReady': onPlayerReady,
                 'onStateChange': onPlayerStateChange
             }
         });
-        $("iframe").attr("src", "https://www.youtube.com/embed/?autoplay=1&enablejsapi=AIzaSyC6nuQtesIctSQWnpzNMzleCOxHv7YEk8s&playsupported=true&mute=1")
+        $("iframe").attr("src", "https://www.youtube.com/embed/?autoplay=1&enablejsapi=AIzaSyC6nuQtesIctSQWnpzNMzleCOxHv7YEk8s&playsupported=true&mute=1&origin=https://backdatabase.herokuapp.com")
+
 
     };
 
