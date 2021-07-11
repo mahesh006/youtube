@@ -23,8 +23,8 @@ io.on('connection', function(socket){
 
     //VIDEO========================================
     
-    io.to(socket.handshake.query.roomName).emit('newUser');
-    socket.join(socket.handshake.query.roomName, function(){
+    io.to(connection).emit('newUser');
+    socket.join(connection, function(){
         io.to('${socketId}').emit('newUser');
     });
     socket.on('requestCurrentVideo', function(){
